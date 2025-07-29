@@ -1,0 +1,15 @@
+<h1>Notes 📑</h1>
+<ul>
+    <% for (let note of notes) { %>
+        <li style="display:flex">
+            <a href="/notes/<%= note.id %>">
+                <%= note.content %>
+            </a>
+
+            <form action="/api/notes/<%= note.id %>/delete" method="POST">
+                <button>X</button>
+            </form>
+        </li>
+        <% } %>
+</ul>
+<a href="/notes/new">New note</a>

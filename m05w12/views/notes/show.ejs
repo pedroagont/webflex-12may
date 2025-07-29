@@ -1,0 +1,14 @@
+<h1>
+    <%= note.content %>
+</h1>
+<form action="/api/notes/<%= note.id %>/edit" method="POST">
+    <input type="text" name="content" value="<%= note.content %>">
+    <button>Edit note</button>
+</form>
+
+
+<form action="/api/notes/<%= note.id %>/delete" method="POST">
+    <label>Delete</label>
+    <button>X</button>
+</form>
+<a href="/notes">Back to notes</a>
